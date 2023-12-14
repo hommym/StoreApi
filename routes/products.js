@@ -40,16 +40,16 @@ if(sort){
 }
 
 
-// setting the proprties that is returned in the returned documents 
+// // setting the proprties that is returned in the returned documents 
 if(fields){
      queryReturned.select(fields.split(",").join(" "))
 }
 
-// setting up paging functionality
-limit=(limit)?Number(limit):10
-page=(page)?Number(page):1
+// // setting up paging functionality
+const limitNumber=(limit)? Number(limit):10
+const pageNumber=(page)? Number(page):1
 
-queryObject.limit(limit).skip((page-1)*limit)
+queryReturned.limit(limitNumber).skip((pageNumber-1)*limitNumber)
 
 
 const allProducts= await queryReturned
