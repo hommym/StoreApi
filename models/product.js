@@ -19,6 +19,10 @@ const schema= new mongoose.Schema({
         enum:["caressa", "ikea","liddy","marcos"],
         required:true
     },
+    featured:{
+        type:Boolean,
+        default:false,
+    },
     rating:Number
        
 })
